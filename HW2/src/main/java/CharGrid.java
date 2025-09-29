@@ -31,7 +31,7 @@ public class CharGrid {
 				}
 			}
 		}
-		if (maxRow = -1) {
+		if (maxRow == -1) {
 			return 0;
 		}
 		return (maxRow - minRow + 1) * (maxCol - minCol + 1);
@@ -43,10 +43,10 @@ public class CharGrid {
 	 */
 	private int armlength (char[][] board, int i, int j, int dx, int dy) {
 		int count = 0;
-		int ch = board[i][j];
+		char ch = board[i][j];
 		int x = i + dx;
 		int y = j + dy;
-		while (x >= 0 && x < board.length && y >= 0 && y < board[0].length && board[x][y] = ch) {
+		while (x >= 0 && x < board.length && y >= 0 && y < board[0].length && board[x][y] == ch) {
 			count ++;
 			x += dx;
 			y += dy;
